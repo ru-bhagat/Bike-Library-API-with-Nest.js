@@ -32,11 +32,9 @@ This is a simple REST API built with **Nest.js** to manage a bike library. The A
 #### 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-cd YOUR_REPOSITORY_NAME
+git clone https://github.com/ru-bhagat/Bike-Library-API-with-Nest.js.git
+cd Bike-Library-API-with-Nest.js
 ```
-
-Replace `YOUR_USERNAME` and `YOUR_REPOSITORY_NAME` with your actual GitHub username and repository name.
 
 #### 2. **Install dependencies**
 
