@@ -81,18 +81,6 @@ http://localhost:3000/api
 
 ---
 
-## Running Tests (Optional)
-
-If you want to run unit tests, use the following command:
-
-```bash
-npm run test
-```
-
-This will execute the unit tests for your application (if they are set up).
-
----
-
 ## Project Structure
 
 ```
@@ -107,11 +95,6 @@ src
 │       └── bike.entity.ts  # The Bike entity schema for the database
 └── main.ts                # Application entry point, where Swagger is set up
 ```
-
-- **`bike.controller.ts`**: Defines API routes and handles HTTP requests.
-- **`bike.service.ts`**: Contains the business logic for managing bikes.
-- **`dto/create-bike.dto.ts`**: Validates incoming data for bike creation and updates.
-- **`entities/bike.entity.ts`**: Defines the structure of the Bike entity stored in the database.
 
 ## License
 This project is licensed under the MIT License.
