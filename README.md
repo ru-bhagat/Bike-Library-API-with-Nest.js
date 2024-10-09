@@ -93,6 +93,77 @@ src
 │       └── bike.entity.ts  # The Bike entity schema for the database
 └── main.ts                # Application entry point, where Swagger is set up
 ```
+## Example 
+### 1. **Adding a Bike to the Library (POST `/bikes`)**
+   
+   - Click on the `POST /bikes` endpoint in Swagger UI.
+   - Click on the **"Try it out"** button.
+   - In the **Request Body**, enter an example bike object in JSON format, like this:
+   
+     ```json
+     {
+       "make": "Royal Enfield",
+       "model": "Classic 350",
+       "year": 2021,
+       "type": "Cruiser"
+     }
+     ```
+
+   - Click **"Execute"** to send the request.
+   - You should receive a `201 Created` response with the newly created bike's details in the response body.
+
+### 2. **Fetching the List of Bikes (GET `/bikes`)**
+
+   - After adding a bike, click on the `GET /bikes` endpoint.
+   - Click **"Execute"**.
+   - The server should return a list of bikes, including the one you just added. The response body will look something like this:
+
+     ```json
+     [
+       {
+         "id": "some-unique-id",
+         "make": "Royal Enfield",
+         "model": "Classic 350",
+         "year": 2021,
+         "type": "Cruiser"
+       }
+     ]
+     ```
+
+### 3. **Fetching a Specific Bike by ID (GET `/bikes/{id}`)**
+
+   - You can use the ID of the bike that was returned in the `POST` request.
+   - Click on the `GET /bikes/{id}` endpoint in Swagger.
+   - Click **"Try it out"**.
+   - Enter the ID of the bike (e.g., `some-unique-id`).
+   - Click **"Execute"**.
+   - The server should return the details of the bike with the specified ID.
+
+### 4. **Updating a Bike's Details (PUT `/bikes/{id}`)**
+
+   - Click on the `PUT /bikes/{id}` endpoint.
+   - Click **"Try it out"**.
+   - Enter the bike's ID and provide the updated details in the request body, like this:
+   
+     ```json
+     {
+       "make": "Royal Enfield",
+       "model": "Meteor 350",
+       "year": 2023,
+       "type": "Cruiser"
+     }
+     ```
+
+   - Click **"Execute"**.
+   - You should receive a `200 OK` response, confirming that the bike's details have been updated.
+
+### 5. **Deleting a Bike (DELETE `/bikes/{id}`)**
+
+   - Click on the `DELETE /bikes/{id}` endpoint.
+   - Click **"Try it out"**.
+   - Enter the bike's ID that you want to delete.
+   - Click **"Execute"**.
+   - You should receive a `200 OK` response confirming that the bike has been deleted.
 
 ## License
 This project is licensed under the MIT License.
